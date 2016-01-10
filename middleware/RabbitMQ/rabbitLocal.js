@@ -10,5 +10,7 @@ module.exports = function () {
     "use strict";
 
     var rabbit = require('rabbit.js');
+    var CONFIG = require('../../config');
+
 
 }();
