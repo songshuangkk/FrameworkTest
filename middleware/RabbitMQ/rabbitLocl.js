@@ -8,7 +8,7 @@
  */
 module.exports = function () {
     "use strict";
-    var test = "";
+
     var rabbit = require('rabbit.js');
 
 }();
