@@ -62,11 +62,11 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(3000, function (err) {
+app.listen(5555, function (err) {
   if (err) {
     return err;
   }
-  console.log('port' + 3000 +'server start success!');
+  console.log('port ' + 5555 +' server start success!');
 });
 
 
