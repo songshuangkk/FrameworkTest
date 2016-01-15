@@ -6,6 +6,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var log4j = require('log4js').getLogger();
 
 var middleware = require('./middleware');
 
@@ -66,7 +67,7 @@ app.listen(5555, function (err) {
   if (err) {
     return err;
   }
-  console.log('port ' + 5555 +' server start success!');
+  log4j.info('port ' + 5555 +' server start success!');
 });
 
 

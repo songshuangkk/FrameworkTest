@@ -3,6 +3,15 @@
  */
 
 module.exports = {
-    'rabbitHost': '',
-    'rabbitPort': ''
+
+    rabbitConfig: {
+        host: '192.168.99.100',
+        port: 5672,
+        login: 'guest',
+        password: 'guest',
+        connectionTimeout: 10000,
+        authMechanism: 'AMQPLAIN',
+        vhost: '/',
+        noDelay: true
+    }
 };

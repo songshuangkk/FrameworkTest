@@ -9,25 +9,19 @@
 module.exports = function () {
     "use strict";
 
-    var rabbit = require('rabbit.js');
+    var log4js = require("log4js");
+    var logger = log4js.getLogger();
+
+    var amqp = require('amqp');
     var CONFIG = require('../../config');
+    var connection = amqp.createConnection(CONFIG.rabbitConfig);
 
-    var context = rabbit.createContext(CONFIG.rabbitHost);
-    context.on('error', function (error) {
-        console.log(error);
+    connection.on('ready', function (error) {
+        if (error) {
+            logger.error(error);
+            return error;
+        }
+        logger.info("server start ready");
+
     });
-
-    context.on('ready', function () {
-        console.log('ready');
-    });
-
-    function getMessage() {
-
-    }
-
-
-
-    return {
-      getMessage: getMessage
-    };
 }();
