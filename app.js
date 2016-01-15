@@ -8,6 +8,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var log4j = require('log4js').getLogger();
 
+var CONFIG = require('./config');
+
 var middleware = require('./middleware');
 
 var routes = require('./routes/index');
@@ -63,11 +65,11 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(5555, function (err) {
+app.listen(CONFIG.serverConfig.port, function (err) {
   if (err) {
     return err;
   }
-  log4j.info('port ' + 5555 +' server start success!');
+  log4j.info('port ' + CONFIG.serverConfig.port +' server start success!');
 });
 
 

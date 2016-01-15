@@ -4,6 +4,10 @@
 
 module.exports = {
 
+    serverConfig: {
+        port: 5555
+    },
+
     rabbitConfig: {
         host: '192.168.99.100',
         port: 5672,

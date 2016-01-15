@@ -21,7 +21,16 @@ module.exports = function () {
             logger.error(error);
             return error;
         }
-        logger.info("server start ready");
 
+        var queue = connection.queue("test-queue", function (queue) {
+            //logger.info("queue success");
+        });
+
+        queue.bind("test-exchange", "test-routingKing");
+        queue.subscribe(getMessage)
     });
+
+    function getMessage (msg) {
+        logger.info(msg);
+    }
 }();
