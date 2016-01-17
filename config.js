@@ -22,6 +22,7 @@ module.exports = {
     redisConfig: {
         host: '',
         port: '',
-        password: ''
+        auth_pass: '',
+        select_db: ''
     }
 };

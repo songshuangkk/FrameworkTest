@@ -7,4 +7,6 @@ module.exports = function () {
      * RabbitMQ
      */
     require('./middleware/RabbitMQ/rabbitLocal');
+    require('./middleware/Redis/redisLocal');
+    require('./middleware/Redis/redisClient');
 }();
