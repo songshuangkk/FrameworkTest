@@ -32,5 +32,6 @@ module.exports = function () {
 
     function getMessage (msg) {
         logger.info(msg);
+        // TODO 根据消息进行分发处理相关的业务
     }
 }();

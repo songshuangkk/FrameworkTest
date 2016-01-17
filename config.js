@@ -17,5 +17,11 @@ module.exports = {
         authMechanism: 'AMQPLAIN',
         vhost: '/',
         noDelay: true
+    },
+
+    redisConfig: {
+        host: '',
+        port: '',
+        password: ''
     }
 };
