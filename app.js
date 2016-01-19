@@ -73,4 +73,7 @@ app.listen(CONFIG.serverConfig.port, function (err) {
 });
 
 
+require('./test/testServer');
+
+
 module.exports = app;
